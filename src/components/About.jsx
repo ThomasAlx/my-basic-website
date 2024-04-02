@@ -1,14 +1,13 @@
 import React from 'react';
 
-const divStyle = {
-    color:'red'
-};
+import styles from "../styles/SubPage.module.css"
+
 
 class About extends React.Component {
     
     render() {
         return (
-            <div style={divStyle}>
+            <div className={styles.page}>
                 <h2>About Page</h2>
                 <main>
                     <p>This section contains information about...</p>
