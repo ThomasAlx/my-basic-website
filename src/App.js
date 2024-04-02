@@ -3,6 +3,7 @@ import React from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import About from './components/About';
 import Home from './components/Home';
+import Contact from './components/Contact';
 import './App.css';
 
 class App extends React.Component {
@@ -24,12 +25,9 @@ class App extends React.Component {
         </nav>
         <p>Hello!</p>
         <Routes>
-          <Route path="/" element={<Home/>}>
-            {/* <Home /> */}
-          </Route>
-          <Route path="/" element={<about/>}>
-            {/* <About /> */}
-          </Route>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </div>
     );

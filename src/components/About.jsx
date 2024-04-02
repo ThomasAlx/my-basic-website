@@ -1,7 +1,7 @@
 import React from 'react';
 
 const divStyle = {
-    color:'white'
+    color:'red'
 };
 
 class About extends React.Component {
