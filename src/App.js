@@ -6,30 +6,38 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import './App.css';
 
+import styles from './styles/General.module.css'
+
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <nav>
-          <ul id="navigation">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+        <body>
+        <nav class={styles.nav}>
+          <div>
+            <Link to="/">
+              <button class={styles.button_nav}>Home</button>
+            </Link>
+            <Link to="/about">
+              <button class={styles.button_nav}>About</button>
+            </Link>
+            <Link to="/contact">
+              <button class={styles.button_nav}>Contact</button>
+            </Link>
+          </div>
         </nav>
-        <p>Hello!</p>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-        </Routes>
-      </div>
+        <main class={styles.page_container}>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/contact" element={<Contact/>}/>
+          </Routes>
+        </main>
+        <footer className={styles.foot}>
+          <p>This is the footer</p>
+        </footer>
+        
+      </body>
+      
     );
   }
 }
