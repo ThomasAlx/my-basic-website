@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import About from './components/About';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Estimate from './components/Estimate';
 import './App.css';
 
 import styles from './styles/General.module.css'
@@ -23,6 +24,9 @@ class App extends React.Component {
             <Link to="/contact">
               <button class={styles.button_nav}>Contact</button>
             </Link>
+            <Link to="/submit">
+              <button class={styles.button_nav_estimate}>GET ESTIMATE</button>
+            </Link>
           </div>
         </nav>
         <main class={styles.page_container}>
@@ -30,6 +34,7 @@ class App extends React.Component {
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/contact" element={<Contact/>}/>
+            <Route path="/submit" element={<Estimate/>}/>
           </Routes>
         </main>
         <footer className={styles.foot}>
