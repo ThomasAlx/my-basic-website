@@ -44,7 +44,7 @@ class Estimate extends React.Component {
                         Attach documents: <input type="file" id="fileInput" placeholder="Attach your documents" className={styles.form_text}/>
                     </p>
                     <p>
-                        <textarea id="messageInput" placeholder="Enter your message." rows={4} cols={50} className={styles.form_text}/>
+                        <textarea id="messageInput" placeholder="Enter your message." rows={4} className={styles.form_message}/>
                     </p>
                 </div>
             </div>
